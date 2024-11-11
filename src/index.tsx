@@ -5,11 +5,11 @@ import useDictionary from "./hooks/useDictionary"
 
 interface Props {
     languages: object,
-    children: ReactNode
+    children?: ReactNode
 }
 
 export interface DContext {
-    languages: any,
+    languages: any
 }
 
 export const DictionaryContext = createContext<DContext | null>(null)

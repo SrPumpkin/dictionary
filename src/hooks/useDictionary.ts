@@ -2,11 +2,15 @@ import { useSyncExternalStore } from 'react';
 import { getContext } from "./getContext";
 import addDeps from "../utils/addDeps";
 
-export default function useDictionary(selector: (state: any) => any, dep: object) {
+const useDictionary = (selector: (state: any) => any, dep: object = {}) => {
     const languages = getContext()
-    const currentState = useSyncExternalStore(languages.subscribe, languages.getDictionary)
+    const currentState = useSyncExternalStore(languages.subscribe, languages.getDictionary, selector)
 
-    let undepsData: string = selector(currentState)
+    let undepsData = selector(currentState)
+
+    if (typeof undepsData === "object") return undepsData
 
     return addDeps(undepsData, dep)
 }
+
+export default useDictionary
