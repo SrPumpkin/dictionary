@@ -1,0 +1,39 @@
+{
+  "name": "dictionary-react",
+  "version": "1.1.0",
+  "description": "Dictionary is a JS library that helps automate language switching. This library can greatly speed up the development of language versions for any type of application. This library is new and requires a lot of improvements, but you can already try it out. Initially, it was supposed to use Dictionary with React.",
+  "license": "MIT",
+  "homepage": "https://github.com/srpumpkin/dictionary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srpumpkin/dictionary"
+  },
+  "bugs": {
+    "url": "https://github.com/srpumpkin/dictionary/issues"
+  },
+  "keywords": [
+    "react",
+    "state",
+    "predictable",
+    "functional",
+    "hot",
+    "live"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "tsup": "^8.3.5"
+  },
+  "dependencies": {
+    "react": "^18.0"
+  },
+  "author": "SrPumpkin <developer@pumpkin-world.org> (https://github.com/srpumpkin)"
+}
